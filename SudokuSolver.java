@@ -36,41 +36,34 @@ public class SudokuSolver {
 
 		}
 	}
-
-	private static boolean validForRow(int row, int num) {
+	private static boolean isValid(int row, int col, int num) {
+		//check row
 		for (int i = 0; i < sudokuBoard[0].length; i++) {
 			if (sudokuBoard[row][i] == num) {
-				return true;
+				return false;
 			}
 		}
-		return false;
-	}
 
-	private static boolean validForCol(int col, int num) {
-		for (int i = 0; i < sudokuBoard.length; i++) {
-			if (sudokuBoard[i][col] == num) {
-				return true;
+		//check column
+		for (int j = 0; j < sudokuBoard.length; j++) {
+			if (sudokuBoard[j][col] == num) {
+				return false;
 			}
 		}
-		return false;
-	}
 
-	private static boolean validForBox(int row, int col, int num) {
+		//check if in 3x3 box (9 cubes)
 		int boxRow = row - row % 3;
 		int boxCol = col - col % 3;
 		
 		for (int i = boxRow; i < boxRow + 3; i++) {
 			for (int j = boxCol; j < boxCol + 3; j++) {
 				if (sudokuBoard[i][j] == num) {
-					return true;
+					return false;
 				}
 			}
 		}
-		return false;
-	}
+		return true;
 
-	private static boolean isOkay(int row, int col, int num) {
-		return !validForRow(row, num) && !validForCol(col, num) && !validForBox(row, col, num);
 	}
 
 
@@ -78,8 +71,9 @@ public class SudokuSolver {
 		for (int i = 0; i < sudokuBoard.length; i++) {
 			for (int j = 0; j < sudokuBoard[0].length; j++) {
 				if (sudokuBoard[i][j] == 0) {
+					//try numbers 1 - 9
 					for (int number = 1; number <= sudokuBoard.length; number++) {
-						if (isOkay(i, j, number)) {
+						if (isValid(i, j, number)) {
 							sudokuBoard[i][j] = number;
 							if (solve()) {
 								return true;
