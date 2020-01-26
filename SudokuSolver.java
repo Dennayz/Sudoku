@@ -73,6 +73,7 @@ public class SudokuSolver {
 				if (sudokuBoard[i][j] == 0) {
 					//try numbers 1 - 9
 					for (int number = 1; number <= sudokuBoard.length; number++) {
+						//if it is valid position, set it on board then backtrack
 						if (isValid(i, j, number)) {
 							sudokuBoard[i][j] = number;
 							if (solve()) {
