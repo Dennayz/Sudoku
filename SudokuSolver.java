@@ -1,3 +1,4 @@
+package Sudoku;
 
 public class SudokuSolver {
 	//input any sudoku board
