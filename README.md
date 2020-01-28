@@ -1,5 +1,5 @@
 # Sudoku
-Built a simple Sudoku Solver using Java
+Built a Sudoku Solver using Java that can solve nxn
 
 # Algorithm
 - Begin with unsolved board valid or not
