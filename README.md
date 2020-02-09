@@ -6,6 +6,7 @@ Built a simple Interface using Java's Swing GUI widget toolkit and Abstract Wind
 
 # RUN
 - git clone the repository
+- cd to the Repo
 - cd to SudokuGUI
 - on command line --> java -jar Sudoku.jar
 
