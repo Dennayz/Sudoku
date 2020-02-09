@@ -4,6 +4,11 @@ Built a Sudoku Solver using Java that can solve nxn
 # UPDATE
 Built a simple Interface using Java's Swing GUI widget toolkit and Abstract Window Toolkit (awt)
 
+# RUN
+- git clone the repository
+- cd to SudokuGUI
+- on command line --> java -jar Sudoku.jar
+
 # Algorithm
 - Begin with unsolved board valid or not
 - checks each open space with 0 in its position
