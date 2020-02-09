@@ -19,4 +19,4 @@ Built a simple Interface using Java's Swing GUI widget toolkit and Abstract Wind
 - Java's GUI interface
 
 
-![](/Users/denniszhang/Desktop/github/remote_pushed/Sudoku/grid.png)
+![](https://github.com/Dennayz/Sudoku/blob/master/grid.png)
