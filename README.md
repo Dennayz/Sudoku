@@ -17,3 +17,6 @@ Built a simple Interface using Java's Swing GUI widget toolkit and Abstract Wind
 - Backtracking Algorithm
   - recursively trying to build a solution incrementally, one piece at a time, removing those solutions that fail to satisfy the constraints of the problem at any point of time. 
 - Java's GUI interface
+
+
+![](/Users/denniszhang/Desktop/github/remote_pushed/Sudoku/grid.png)
